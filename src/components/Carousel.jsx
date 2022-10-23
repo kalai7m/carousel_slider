@@ -8,7 +8,7 @@ const Carousel = ({ data }) => {
   let [activeData, setActiveData] = useState([]);
   let [disableRight, setDisableRight] = useState(false);
   let tile = 2; //tile to be shown
-  let tileMove = 2;
+  let tileMove = 2; //num of tiles to move
   let totLen = cdata.length;
   useEffect(() => {
     let temp = cdata.filter((d) => d.isActive === true);
