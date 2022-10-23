@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Carousel from "./components/Carousel";
 
-function App() {
+const App = () => {
+  const data = [
+    { name: 0, isActive: true },
+    { name: 1, isActive: true },
+    { name: 2, isActive: false },
+    { name: 3, isActive: false },
+    { name: 4, isActive: false },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="py-10 bg-slate-200">
+      <Carousel data={data} />
     </div>
   );
-}
+};
 
 export default App;
